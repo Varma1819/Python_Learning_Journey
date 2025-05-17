@@ -221,10 +221,8 @@ the Area of circle was : 408.28
 #EX-3 - Hypothesys  of a ryt angel Triangle  i.e - root of (a^2 + b^2)
 
 import math
-
 a = float(input("enter side of a:"))
 b = float(input("enter side of b: "))
-
 c = math.sqrt(pow(a,2) + pow(b,2))
 print(f"side of c: {c}")
 
@@ -232,6 +230,156 @@ O/P -
 enter side of a:12
 enter side of b: 34
 side of c: 36.05551275463989
+
+ if statements 🤔
+#if = Do some code If some conditionis true
+#        Else do something else
+
+EX:1
+age = int(input("enter ur age:"))
+
+if age >= 100:
+    print("you are too old to get Credit Card!")
+elif age >18:
+    print("you are eligible for Credit Card")
+else:
+    print("Your are Not eligible for Credit card!")
+
+#OUTPUTS
+
+#enter ur age:18
+#Your are Not eligible for Credit card!
+
+#enter ur age:22
+#you are eligible for Credit Card!
+
+#enter ur age:111
+#you are too old to get Credit Card!
+
+Ex:2
+response = input("Do u like the car? (Y/N): ")
+
+if response == "Y": #Comparision Operator
+    print("Get into the car!")
+else:
+    print("Oh! Good Bye then....")
+
+#OUTPUTS
+
+#Do u like the car? (Y/N): N
+#Oh! Good Bye then....
+
+#Do u like the car? (Y/N): Y
+#Get into the car!
+
+EX:3
+Car_for_sale=False
+
+if Car_for_sale:
+    print("It is $5000 only!")
+else:
+    print("Not for sale!")
+
+#OUTPUT
+#It is $5000 only!  (if it is True)
+#Not for sale!
+
+⭐ calculator program 🧮 USING IF STATEMENTS ONLY
+
+#Python calculator program 🧮
+
+operator = input("Enter an Operator ( + - * / ):")
+num1 = float(input("Enter num1:"))
+num2 = float(input("Enter num2:"))
+
+if operator == "+":
+    result = num1+num2
+    print(result)
+elif operator == "-":
+    result = num1-num2
+    print(result)
+elif operator == "*":
+    result = num1*num2
+    print(result)
+elif operator == "/":
+    result = num1/num2
+    print(round(result,3)) #To round upto 3 decimal values after .
+
+else:
+    print(f"{operator} is invalid operator!")
+
+#OUTPUTS
+
+#Enter an Operator ( + - * / ):-
+#Enter num1:2
+#Enter num2:4
+#-2.0
+
+#Enter an Operator ( + - * / ):**
+#Enter num1:23
+#Enter num2:24
+#** is invalid operator!
+
+#Enter an Operator ( + - * / ):/
+#Enter num1:24
+#Enter num2:83
+#0.2891566265060241
+
+#Enter an Operator ( + - * / ):/
+#Enter num1:28
+#Enter num2:12
+#2.333
+
+⭐Python weight conversion program 🏋️
+#Python weight conversion program 🏋️
+
+weight=float(input("enter your weight:"))
+unit=input("Kilograms or Pounds? (K or L): ")
+
+if unit == "K":
+    weight = weight*2.205
+    unit = "Lbs."
+    print(f"Your weight is: {round(weight,1)} {unit}")
+elif unit =="L":
+    weight = weight/2.205
+    unit = "Kgs."
+    print(f"Your weight is: {round(weight,1)} {unit}")
+else:
+    print(f"{unit} was not valid")
+
+
+#OUTPUTS
+
+#enter your weight:234
+#Kilograms or Pounds? (K or L): L
+#Your weight is: 106.1 Kgs.
+
+#enter your weight:95
+#Kilograms or Pounds? (K or L): K
+#Your weight is: 209.5 Lbs.
+
+⭐ temperature conversion program 🌡️
+
+unit = input("Is this temperature in Celsius or Fahrenheit (C/F): ")
+temp = float(input("Enter the temperature: "))
+
+if unit == "C":
+    temp = round((9 * temp) / 5 + 32, 1)
+    print(f"The temperature in Fahrenheit is: {temp}°F")
+elif unit == "F":
+    temp = round((temp - 32) * 5 / 9, 1)
+    print(f"The temperature in Celsius is: {temp}°C")
+else:
+    print(f"{unit} is an invalid unit of measurement")
+
+#OUTPUT
+#Is this temperature in Celsius or Fahrenheit (C/F): F
+#Enter the temperature: 134
+#The temperature in Celsius is: 56.7°C
+
+#Is this temperature in Celsius or Fahrenheit (C/F): C
+#Enter the temperature: 45
+#The temperature in Fahrenheit is: 113.0°F
 
 
 
