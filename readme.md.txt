@@ -381,6 +381,81 @@ else:
 #Enter the temperature: 45
 #The temperature in Fahrenheit is: 113.0°F
 
+logical operators 🌦️ = evaluate Multiple conditions That is( or and not )
+
+#                           Or = at least one condition must be true
+#                           End = both conditions must be true
+#                           Not = inverse the condition [ not false, not true ]
+
+EX-1: OR
+
+temp = -5
+is_raining = True
+
+if temp>35  or temp<0 or is_raining:
+    print("Event cancelled!")
+else:
+    print("Event still scheduled!")
+
+
+#Event cancelled! #if temp is -5
+#Event cancelled! #if temp is 36
+#Event cancelled! #if is_raining is True
+#Event still scheduled! #if temp is 5; or FalsE
+
+EX-2: AND
+
+temp = 28
+is_Sunny = True  #Means sunny out outside
+
+if temp >= 28 and is_Sunny:
+    print("It is hot outside and also sunny ")
+elif temp <= 0 and is_Sunny:
+    print("It is cold outside and also sunny")
+elif 20 > temp > 0 and is_Sunny:
+    print("It is  warm outside and also sunny")
+
+#outputs:
+#It is  warm outside and also sunny ; if temp = 6
+#It is cold outside and also sunny ; if temp =-3
+#It is hot outside and also sunny ; if temp =28
+
+EX-3: NOT
+temp = 5
+is_Sunny = False  #Means not sunny outside
+
+if temp >= 28 and not is_Sunny: #not is_sunny -> i.e false means cloudy.
+    print("It is hot outside and also cloudy ")
+elif temp <= 0 and not is_Sunny:
+    print("It is cold outside and also cloudy")
+elif 20 > temp > 0 and not is_Sunny:
+    print("It is  warm outside and also cloudy")
+else:
+    print(f"{temp} is not valid!!")
+#outputs:
+#It is hot outside and also cloudy ; if temp = 28 when is_Sunny = False
+#It is cold outside and also cloudy ; if temp = 0 when is_Sunny = False
+#It is  warm outside and also cloudy ; if temp = 5 when is_Sunny = False
+
+#  CONDITION EXPRESSIONS = A one line shortcut for the if-else statement (ternary operator)
+
+#                         Print or assign one of two values based on a condition
+#                           X if 'condition' else y
+
+
+#biology_class= "yes"
+#print("Today Class is there" if biology_class == "No"  else "No class") #o/p: No class
+
+#temp=-3
+#weather="Its Cold! put on some bonfire" if temp < 0 else "Hottie Day!!"
+#print(weather) #o/p:Its Cold! put on some bonfire
+
+#a=3
+#b=4
+#print("a is min" if a<b else "b is max") #o/p: a is min
+
+
+
 
 
 
