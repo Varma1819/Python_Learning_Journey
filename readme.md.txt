@@ -437,11 +437,13 @@ else:
 #It is cold outside and also cloudy ; if temp = 0 when is_Sunny = False
 #It is  warm outside and also cloudy ; if temp = 5 when is_Sunny = False
 
+
+
+
 #  CONDITION EXPRESSIONS = A one line shortcut for the if-else statement (ternary operator)
 
 #                         Print or assign one of two values based on a condition
 #                           X if 'condition' else y
-
 
 #biology_class= "yes"
 #print("Today Class is there" if biology_class == "No"  else "No class") #o/p: No class
@@ -456,6 +458,238 @@ else:
 
 
 
+string methods 〰️
+
+ph_num = input("enter ur ph num:")
+#result = len(name) #O/P: enter ur name: MJR VARMA - 10
+#result = name.find("A") #O/P: enter ur name:MJR VARMA - 5
+#result = name.rfind("R") #O/P: enter ur name:MJR VARMA - 6
+#name = name.capitalize() #O/P: enter ur name:mjr varma - Mjr varma
+#name = name.upper() #O/P: enter ur name:mjr varma - MJR VARMA
+#name = name.lower() #O/P: enter ur name:MJR VARMA - mjr varma
+#result = name.islower() #O/P: enter ur name:MJR VARMA - False
+#result = name.isdigit() #O/P: enter ur name:mjr123 - False
+#result = phone_number.count("2") #O/P: enter ur ph num:1223-422-452-11 - 5
+#ph_num = ph_num.replace("-"," ") #O/P: enter ur ph num:123-234-2442-1 = 123 234 2442 1
+print(ph_num)
+
+
+#  Validate user input exercise
+# 1. username is no more than 12 characters
+# 2. username Must not contain spaces
+# 3. Username must not contain digits
+
+user_name = input("Enter a User_name:")
+
+if len(user_name) > 12:
+    print("More than 12 Chracters...") #O/P: Enter a User_name:M JAYA RAKESH VARMA - More than 12 Chracters...
+elif user_name.find(" ") != -1:
+    print("No Spaces Please!!!") #O/P: Enter a User_name: MJR Varma - No Spaces Please!!!
+elif not user_name.isalpha():
+    print("No Digits Please!!!") #O/P: Enter a User_name:Rakesh123 - No Digits Please!!!
+else:
+    print(f"Welcome {user_name}") #O/P: Enter a User_name:MJR Varma - Welcome MJR Varma
+
+
+
+# String Indexing✂️
+                        Accesing elements of a sequence using [] (indexing operator)
+                        [start : end : step]
+
+credit_num = "1213-4213-4561-2113"
+
+#print(credit_num[4]) # Print the digit/word/symbol at the index 4
+#print(credit_num[:4]) #print the digits until index 4 (but not index 4) from index 0 - 1213
+#print(credit_num[5:9]) #prints numbers from index 5 to until index 9 - 4213
+#print(credit_num[5:]) #prints from index 5 to until end - 4213-4561-2113
+#print(credit_num[-1]) #prints the first number from backward (reverse) - 3
+#print(credit_num[::2]) #prints every second character from the string - 11-2346-13
+#print(credit_num[::3]) #O/P: 132-623
+#print(credit_num[2:9:2]) #prints from 2 to until 9 by step of 2 - 1-23
+#last_digits = credit_num[-4:] , print(last_digits) #By using negitive indexing we print the last_digits - 2113
+#credit_num = credit_num[::-1] , print(credit_num) #Reverse a string by using a negative indexing - 3112-1654-3124-3121
+
+
+#  format specifiers 💬= {value:flags} format a value based on what
+#                        flags are inserted
+
+# .(number)f = round to that many decimal places (fixed point)
+# :(number) = allocate that many spaces
+# :03 = allocate and zero pad that many spaces
+# :< = left justify
+# :> = right justify
+# :^ = center align
+# :+ = use a plus sign to indicate positive value
+# := = place sign to leftmost position
+# :  = insert a space before positive numbers
+# :, = comma separator
+
+
+mrp_1 = 1000.3343
+mrp_2 = -112.45
+mrp_3 = 12424.55
+
+#print(f"MRP 1 is {mrp_1:.2f}")
+#Here :.2f round to that many decimal places (fixed point)...  we can customize accordingly whrer stock prices need to precise we keep :.6f i.e; it gives 6 decimal floating_points after point...
+#print(f"MRP 2 is {mrp_2:.2f}")
+#print(f"MRP 3 is {mrp_3:.2f}")
+# O/P: MRP 1 is 10.33 , MRP 2 is -112.45 , MRP 3 is 14.55
+
+
+#print(f"MRP 1 is {mrp_1:10}") # :(number) = allocate that many spaces
+#print(f"MRP 2 is {mrp_2:10}")
+#print(f"MRP 3 is {mrp_3:10}")
+#O/P :
+#MRP 1 is    10.3343
+#MRP 2 is    -112.45
+#MRP 3 is      14.55
+
+
+# :010 = allocate and zero pad that many spaces
+#print(f"MRP 1 is {mrp_1:010}")
+#print(f"MRP 2 is {mrp_2:010}")
+#print(f"MRP 3 is {mrp_3:010}")
+#O/P :
+#MRP 1 is    10.3343
+#MRP 2 is    -112.45
+#MRP 3 is      14.55
+
+
+# :< = left justify
+# :> = right justify
+# :^ = center align
+#print(f"MRP 1 is {mrp_1:<10}")
+#print(f"MRP 2 is {mrp_2:>10}")
+#print(f"MRP 3 is {mrp_3:^10}")
+#MRP 1 is 10.3343
+#MRP 2 is    -112.45
+#MRP 3 is   14.55
+
+
+# :+ = use a plus sign to indicate positive value
+# :  = insert a space before positive numbers
+#print(f"MRP 1 is {mrp_1:+}")
+#print(f"MRP 2 is {mrp_2:+}")
+#print(f"MRP 3 is {mrp_3: }")
+#O/P:
+#MRP 1 is +10.3343
+#MRP 2 is -112.45
+#MRP 3 is  14.55
+
+
+# :, = comma separator
+#print(f"MRP 1 is {mrp_1:,}")
+#print(f"MRP 2 is {mrp_2:,}")
+#print(f"MRP 3 is {mrp_3:,}")
+#O/P:
+#MRP 1 is 1,000.3343
+#MRP 2 is -112.45
+#MRP 3 is 12,424.55
+
+
+# := = place sign to leftmost position
+#print(f"MRP 1 is {mrp_1:=}")
+#print(f"MRP 2 is {mrp_2:=}")
+#print(f"MRP 3 is {mrp_3:=}")
+#O/P:
+#MRP 1 is 1000.3343
+#MRP 2 is -112.45
+#MRP 3 is 12424.55
+
+
+
+while loops ♾️ -
+                    Execute some code WHILE some condition remains true
+
+#EX:1
+name = input("enter ur name:")
+while name == "":
+    print("Plzzz enter ur name!!!!")
+    name = input("Uff... enter ur name properly:")     #This line is a chance to escaspe...
+                                                        If u give "Plzzz enter ur name!!!!" and
+                                                        leaves it.. then it falls into infite loop
+print(f"Hello {name}")
+#O/P:
+#enter ur name:
+#Plzzz enter ur name!!!!
+#Uff... enter ur name properly: Rakesh
+#Hello  Rakesh
+
+
+#EX:2
+age = int(input("enter ur age:"))
+while age < 0:
+    print("Age must be Positive Number!!")
+    age = int(input("Enter ur age:"))
+print(f"You are {age} year/s old")
+#O/P:
+#enter ur age:-3
+#Age must be Positive Number!!
+#Enter ur age:6
+#You are 6 year/s old
+
+
+#EX:3 (with logical operators this tymm ( not / ! )...)
+food = input("enter food u like (q to quit!): ")
+while food != "q":
+    print(f"You like {food}")
+    food = input("Enter another food u like (q to quit):")
+print("bye")
+#O/P:
+#enter food u like (q to quit!): Biryani
+#You like Biryani
+#Enter another food u like (q to quit):Apollo Fish
+#You like Apollo Fish
+#Enter another food u like (q to quit):q
+#bye
+
+
+#EX:4
+while True:
+    num = int(input("Enter a number between 1 - 10: "))
+
+    if num < 1 or num > 10:
+        print(f"{num} is not valid!! Please try again.\n")
+    else:
+        if num == 7:
+            print("Thala For a Reason")
+        print(f"{num} lies between 1 - 10")
+        break  # exit loop when valid input is received
+
+#Enter a number between 1 - 10: 12
+#12 is not valid!! Please try again.
+#Enter a number between 1 - 10: 2
+#2 lies between 1 - 10
+#Enter a number between 1 - 10: 7
+#Thala For a Reason
+#7 lies between 1 - 10
+
+
+⭐ Python compound interest calculator 💵
+
+principle = 0
+rate = 0
+time = 0
+while principle <= 0:
+    principle = float(input("Enter the principle amount:"))
+    if principle <=0:
+        print("It cant be zero!")
+while rate <= 0:
+    rate = float(input("Enter the Intrest rate:"))
+    if rate <=0:
+        print("It cant be zero!")
+while time <= 0:
+    time = float(input("Enter the No of Years:"))
+    if time <=0:
+        print("It cant be zero!")
+total = principle * pow((1 + rate / 100), time)
+print(f"Balance amount was: Rs {total:.2f}")
+
+#O/P:
+Enter the principle amount:2000
+Enter the Intrest rate:10
+Enter the No of Years:2
+Balance amount was: Rs 2420.00
 
 
 
